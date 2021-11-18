@@ -13,8 +13,7 @@ class Button extends Component {
 
       changeMode =()=>{
         const {mode}=this.state;
-      this.setState({mode:false
-      })
+      this.setState({mode:!mode})
     }
 
     

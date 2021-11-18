@@ -20,7 +20,7 @@ class Counter extends Component {
   }
 
   changeMode =()=>{
-  this.setState({mode:false
+  this.setState({mode:!this.state.mode
   })
   console.log(this.state.mode)
 }
@@ -38,13 +38,12 @@ class Counter extends Component {
     return (
       <>
       <section className="counters">
-          <form className='form'>
       <p className="counterp">
         {count}
       </p>
-      <button onClick={this.math}>Add</button>
+      <button onClick={this.math}>{this.state.mode?"Add":"Sub"}</button>
       <button onClick={this.changeMode}>Mode</button>
-      </form>
+      
       </section>
       </>
        
